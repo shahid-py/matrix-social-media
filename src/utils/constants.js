@@ -1,0 +1,1 @@
+export const API_URL = "https://matrix-social-media-backend.shahid-v2.repl.co";
