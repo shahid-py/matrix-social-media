@@ -40,13 +40,14 @@ export function Search() {
       </div>
       {filteredUsers
         .filter((user) => {
-          if (searchText === "") {
+          if (searchText === " ") {
             return user;
           } else if (
             user?.name.toLowerCase().includes(searchText.toLowerCase())
           ) {
             return user;
           }
+          return false;
         })
         .map((user) => (
           <Link to={`/${user?.username}`} key={user._id}>
